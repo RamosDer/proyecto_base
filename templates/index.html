@@ -1,0 +1,11 @@
+{% load socialaccount %}
+<html>
+<body>
+<h1> PROYECTO </h1>
+{% if user.is_authenticated %}
+  <p> Estas logeado como {{ user.username }}</p>
+{% else %}
+  <a href="{% provider_login_url 'google' %}">Inicia Sesion con Google</a>
+{% endif %}
+</body>
+</html>
